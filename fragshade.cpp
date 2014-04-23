@@ -4,13 +4,33 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <GL/glut.h>
+
 #include "gfx.h"
+#include "point.h"
+#include "polygon.h"
 
 void display(){
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
-	set_pix(1, 1, 1.0, 0.0, 1.0);
-	set_pix(100, 100, 0.0, 1.0, 0.0);
+
+	point_t p1(29.0, 118.0);
+	p1.draw_point();
+
+	point_t p2(250.0, 15.0);
+	p2.draw_point();
+
+	point_t p3(200.0, 170.0);
+	p3.draw_point();
+
+	polygon_t poly;
+	poly.add_point(p1);
+	poly.add_point(p2);
+	poly.add_point(p3);
+
+	poly.draw_polygon();
+
+	//set_pix(1, 1, 1.0, 0.0, 1.0);
+	//set_pix(100, 100, 0.0, 1.0, 0.0);
 	glutSwapBuffers();
 }
 

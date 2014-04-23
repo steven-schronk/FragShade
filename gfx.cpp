@@ -6,7 +6,7 @@
 #include <iostream>
 #include "gfx.h"
 
-void set_pix(GLint x, GLint y, GLfloat r, GLfloat g, GLfloat b)
+void set_pix(int x, int y, float r, float g, float b)
 {
 	glColor3f(r, g, b);
 	glBegin(GL_POINTS);
