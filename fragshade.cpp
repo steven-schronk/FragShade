@@ -29,6 +29,10 @@ void display(){
 
 	poly.draw_polygon();
 
+	draw_line(p1, p2);
+	draw_line(p2, p3);
+	draw_line(p3, p1);
+
 	//set_pix(1, 1, 1.0, 0.0, 1.0);
 	//set_pix(100, 100, 0.0, 1.0, 0.0);
 	glutSwapBuffers();

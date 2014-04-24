@@ -8,6 +8,13 @@ point_t::point_t(double x1, double y1){
 	y = y1;
 }
 
+double point_t::getx(){
+	return x;
+}
+double point_t::gety(){
+	return y;
+}
+
 void point_t::draw_point(){
 	set_pix(x, y, 1.0, 1.0, 1.0);
 }
