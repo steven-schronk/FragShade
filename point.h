@@ -21,8 +21,8 @@ public:
 	virtual void set(const point_t& p) { x = p.x; y = p.y; }
 	void setx(double x) { point_t::x = x; }
 	void sety(double y) { point_t::y = y; }
-	double getx();
-	double gety();
+	double getx() const;
+	double gety() const;
 	void draw_point();
 	//void sety(double z) { point_t::z = z; }
 private:

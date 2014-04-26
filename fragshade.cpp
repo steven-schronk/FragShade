@@ -14,13 +14,13 @@ void display(){
 	glClear(GL_COLOR_BUFFER_BIT);
 
 	point_t p1(29.0, 118.0);
-	p1.draw_point();
-
 	point_t p2(250.0, 15.0);
-	p2.draw_point();
-
 	point_t p3(200.0, 170.0);
-	p3.draw_point();
+
+	point_t p4(0.0, 300.0);
+	point_t p5(300.0, 300.0);
+
+	draw_edge(p4, p5);
 
 	polygon_t poly;
 	poly.add_point(p1);
@@ -28,10 +28,15 @@ void display(){
 	poly.add_point(p3);
 
 	poly.draw_polygon();
+	poly.draw_filled_polygon();
 
-	draw_line(p1, p2);
-	draw_line(p2, p3);
-	draw_line(p3, p1);
+	p1.draw_point();
+	p2.draw_point();
+	p3.draw_point();
+
+	//draw_edge(p1, p2);
+	//draw_edge(p2, p3);
+	//draw_edge(p3, p1);
 
 	//set_pix(1, 1, 1.0, 0.0, 1.0);
 	//set_pix(100, 100, 0.0, 1.0, 0.0);

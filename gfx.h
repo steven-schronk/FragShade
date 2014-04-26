@@ -7,5 +7,5 @@
 #define WINDOW_HEIGHT 768
 
 void set_pix(int x, int y, float r, float g, float b);
-void draw_line(point_t start, point_t stop);
+void draw_edge(point_t start, point_t stop);
 #endif /* GFX_H_ */
