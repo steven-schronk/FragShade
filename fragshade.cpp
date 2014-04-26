@@ -20,9 +20,9 @@ void display(){
 	point_t p4(0.0, 300.0);
 	point_t p5(300.0, 300.0);
 
-	draw_edge(p4, p5);
+	//draw_edge(p4, p5);
 
-	polygon_t poly;
+	polygon_t poly, polyx;
 	poly.add_point(p1);
 	poly.add_point(p2);
 	poly.add_point(p3);
@@ -37,6 +37,22 @@ void display(){
 	//draw_edge(p1, p2);
 	//draw_edge(p2, p3);
 	//draw_edge(p3, p1);
+
+	point_t pa(600.0, 600.0);
+	point_t pb(600.0, 700.0);
+	point_t pc(700.0, 600.0);
+	point_t pd(700.0, 700.0);
+	polyx.add_point(pa);
+	polyx.add_point(pb);
+	polyx.add_point(pc);
+	polyx.add_point(pd);
+
+	polyx.draw_filled_polygon();
+	pa.draw_point();
+	pb.draw_point();
+	pc.draw_point();
+	pd.draw_point();
+
 
 	//set_pix(1, 1, 1.0, 0.0, 1.0);
 	//set_pix(100, 100, 0.0, 1.0, 0.0);
